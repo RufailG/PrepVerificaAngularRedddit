@@ -1,21 +1,27 @@
-<form>
-  <div>
-    <label for="text">Text: </label>
-    <input type="text" name="text" #newTxt>
+<div class="container">
+  <div class="container">
+    <form class="jumbotron">
+      <div class="form-group">
+        <label for="text">Text: </label>
+        <input type="text" name="text" #newTxt>
+      </div>
+      <div class="form-group">
+        <label for="times">Times: </label>
+        <input type="text" name="times"#newTms>
+      </div>
+      <button (click)="spam(newTxt, newTms)" class="btn btn-primary">Submit</button>
+    </form>
   </div>
-  <div>
-    <label for="times">Times: </label>
-    <input type="text" name="times"#newTms>
-  </div>
-  <button (click)="spam(newTxt, newTms)">Submit</button>
-</form>
 
-<div>
-  <ul>
-    <li *ngFor="let a of articles">
-    <app-spammer [txt] = "a"></app-spammer>
-    </li>
-  </ul>
+  <div class="container">
+    <div class="jumbotron">
+      <ul class="list-group">
+        <li *ngFor="let a of articles" class="list-group-item">
+        <app-spammer [txt] = "a"></app-spammer>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <app-spammer></app-spammer>
+
 </div>
-
-<app-spammer></app-spammer>
