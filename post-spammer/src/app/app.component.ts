@@ -18,7 +18,7 @@ export class AppComponent {
 
     for(let i:number =0; i< cont; i++)
     {
-      this.articles.push(i + " " + text.value);
+      this.articles.push(i+1 + " " + text.value);
     }
 
     return false;
